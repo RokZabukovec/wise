@@ -1,0 +1,24 @@
+@import 'variables';
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family-sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $link;
+}
