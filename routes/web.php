@@ -13,7 +13,6 @@
 
 use Illuminate\Auth\Middleware\Authenticate;
 
-Route::get('/api/expenses', 'ExpenseController@exspenseToJson');
 
 Auth::routes();
 Route::post('/profile/update', 'HomeController@updateAvatar')->name('avatarUpdate')->middleware('auth');
