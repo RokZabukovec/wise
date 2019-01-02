@@ -1,4 +1,4 @@
-##WISE - personal finances made easy
+## WISE - personal finances made easy
 
 #### Application for managing your personal incomes and expenses made in Laravel framework.
 
