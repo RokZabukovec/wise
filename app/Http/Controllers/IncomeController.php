@@ -4,8 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Income;
+use App\Account;
 class IncomeController extends Controller
 {
+
+    public function addIncomeToBalance($id, $income){
+        $total = Account::find($id);
+        $balance = $total->balance;
+        $balanceAfter = $balance + $income;
+        Account::find($id)->update(['balance' => $balanceAfter]);
+    }
+
 
     public function addIncome($account_id, Request $request)
     {
@@ -14,7 +23,7 @@ class IncomeController extends Controller
         $income->amount = $request->amount;
         $income->account_id = $account_id;
         $income->save();
-        $income->addIncomeToBalance($account_id, $income->amount);
+        $this->addIncomeToBalance($account_id, $income->amount);
         return redirect()->route('account', ['account_id' => $account_id]);
     }
 }
