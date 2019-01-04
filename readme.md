@@ -11,6 +11,72 @@ Future features:
 - REST API for getting data.
 - Better UI.
 
+
+#### HOW TO CONTRIBUTE
+- Fork this project
+- Clone your git project locally
+```
+git clone https://github.com/YOURUSERNAME/wise.git 
+cd wise
+```
+- Add remote stream
+```
+git remote add upstream https://github.com/RokZabukovec/wise.git
+```
+- Get the latest changes and push them to your project
+```
+git pull upstream master && git push origin master
+```
+- Set up .env configuration files for developing environment
+```
+cp .env.dev .env
+cp laradock-wise/.env.dev laradock-wise/.env
+```
+- Build the Docker environment and run it
+```
+cd laradock-wise
+docker-compose up -d nginx mysql
+```
+- Login to workspace (all artisan commands are executed here)
+```
+docker-compose exec workspace bash
+```
+- Download vendors
+```
+composer update
+```
+- Make a database migration
+```
+php artisan migrate
+```
+- Project should be now accessible in the browser
+```
+http://localhost/
+```
+
+Make sure you are in docker-wise folder
+- Close all running Containers
+```
+docker-compose stop
+```
+- Delete all existing Containers
+```
+docker-compose down
+```
+- Build the Docker environment and run it again (if deleted)
+```
+docker-compose up -d nginx mysql
+```
+- Enter any container using 
+```
+docker-compose exec {container-name} bash
+docker-compose exec workspace bash
+docker-compose exec mysql bash
+...
+```
+- To exit a container, type exit.
+
+
 #### MODELS
 - User => has many Accounts.
 - Account => has many Expenses.
