@@ -98,3 +98,33 @@
     z-index: 1;
   }
 }
+.wise-description{
+  min-height: 500px;
+  .wise-text{
+    display: flex;
+    min-width: 80%;
+    @media screen and (max-width: $break-small) {
+      flex-direction: column;
+    }
+    .wise-property{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      flex-grow: 1;
+      padding: 30px;
+      h3{
+        @media screen and (max-width: $break-small) {
+          text-align: center;
+        }
+
+      }
+      i{
+        text-align: center;
+        color: blue;
+        font-size: 3em;
+        padding-bottom: 30px;
+      }
+    }
+
+  }
+}

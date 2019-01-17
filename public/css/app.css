@@ -10686,3 +10686,39 @@ a:hover {
   z-index: 1;
 }
 
+.wise-description {
+  min-height: 500px;
+}
+
+.wise-description .wise-text {
+  display: flex;
+  min-width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .wise-description .wise-text {
+    flex-direction: column;
+  }
+}
+
+.wise-description .wise-text .wise-property {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex-grow: 1;
+  padding: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .wise-description .wise-text .wise-property h3 {
+    text-align: center;
+  }
+}
+
+.wise-description .wise-text .wise-property i {
+  text-align: center;
+  color: blue;
+  font-size: 3em;
+  padding-bottom: 30px;
+}
+
