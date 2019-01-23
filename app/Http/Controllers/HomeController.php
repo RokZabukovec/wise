@@ -32,10 +32,9 @@ class HomeController extends Controller
     }
 
     /*
-    --------------------------------------------------------------------------
-     updateAvatar()
-    --------------------------------------------------------------------------
-     updateAvatar() function updates or sets users avatar.
+    * Updates or sets users avatar.
+    * @param Request
+    * @return redirect()
     */
 
     public function updateAvatar(Request $request){

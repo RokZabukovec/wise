@@ -8,11 +8,6 @@ use App\Account;
 class ExpenseController extends Controller
 {
 
-public function exspenseToJson(){
-    return Expense::all();
-}
-
-
     public function addExpenseToBalance($id, $expense){
         $total = Account::find($id);
         $balance = $total->balance;
